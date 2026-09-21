@@ -1,0 +1,10 @@
+body, .appMount__51fd7 *:not([class*="userProfile"]):not([class*="banner"]):not(img) {
+  background-color: transparent;
+}
+.appMount__51fd7 {
+  background: rgba(0,0,0,0.3) !important;
+}
+[role="menu"], [role="dialog"] {
+  background-color: rgba(0,0,0,0.5) !important;
+  backdrop-filter: blur(6px);
+}
