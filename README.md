@@ -1,39 +1,39 @@
 # transparent-discord
 
-Siyah, yarı saydam Discord teması — duvar kağıdın hafif görünür, yazılar ve resimler net kalır. Sürümden bağımsız seçiciler kullanır (hash kovalaman gerekmez), uzak `@import` içermez.
+Black, semi-transparent Discord theme — your wallpaper subtly shows through while text and images stay crisp. Uses version-proof selectors (no class-hash chasing) and zero remote `@import`s.
 
-## Önizleme
+## Preview
 
-- Uygulama zemini: siyah %70 opak (`rgba(0,0,0,0.3)`)
-- Menüler + ayarlar: hafif karartma + 6px blur
-- Profil renkleri, rozetler, sunucu resimleri korunur
+- App background: black at 70% opacity (`rgba(0,0,0,0.3)`)
+- Menus + settings: slight darkening + 6px blur
+- Profile colors, badges and server images are preserved
 
-## Kurulum (Vencord)
+## Install (Vencord)
 
-1. Discord Ayarlar → Vencord → **QuickCSS**'i aç
-2. `quickCss.css` içeriğini yapıştır
-3. `Ctrl+R` ile Discord'u yenile
+1. Open Discord Settings → Vencord → **QuickCSS**
+2. Paste the contents of `quickCss.css`
+3. Reload Discord with `Ctrl+R`
 
-## Gerekenler
+## Requirements
 
-- **Vencord** kurulu olmalı
-- Ayarlar → Vencord → **Transparent** açık olmalı (şeffaf pencere)
-- Linux'ta pencere saydamlığı için Discord'u şu bayrakla başlat:
+- **Vencord** installed
+- Settings → Vencord → **Transparent** enabled (transparent window)
+- On Linux, launch Discord with this flag so the window can be transparent:
   `discord --enable-transparent-visuals`
 
-## Özelleştirme
+## Customize
 
-| Ne | Nerede |
+| What | Where |
 |---|---|
-| Zemin opaklığı | `.appMount__51fd7` → `rgba(0,0,0,0.3)` |
-| Menü/ayar karartması | `[role="menu"], [role="dialog"]` → `rgba(0,0,0,0.5)` |
-| Blur miktarı | `backdrop-filter: blur(6px)` |
+| Background opacity | `.appMount__51fd7` → `rgba(0,0,0,0.3)` |
+| Menu/settings tint | `[role="menu"], [role="dialog"]` → `rgba(0,0,0,0.5)` |
+| Blur amount | `backdrop-filter: blur(6px)` |
 
-## Nasıl çalışıyor?
+## How it works
 
-- Tek kural tüm arka planları saydam yapar; profil (`userProfile`), başlık (`banner`) ve resimler istisnadır
-- Menü/ayar seçicileri `role` özniteliğine dayanır — Discord sınıf isimlerini değiştirse bile çalışmaya devam eder
+- A single rule makes all backgrounds transparent; profiles (`userProfile`), banners and images are excluded
+- Menu/settings selectors rely on the `role` attribute — they keep working when Discord renames its classes
 
-## Lisans
+## License
 
 MIT
