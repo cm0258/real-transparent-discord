@@ -1,4 +1,4 @@
-# transparent-discord
+# Real Transparent Discord
 
 Black, semi-transparent Discord theme — your wallpaper subtly shows through while text and images stay crisp. Uses version-proof selectors (no class-hash chasing) and zero remote `@import`s.
 
